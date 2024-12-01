@@ -1,10 +1,11 @@
-# Project Infrastructure
 
-This repository contains the Terraform configuration for the project infrastructure.
 
-## Overview
+Based on the provided context, I'll create a GitHub README for the Terraform project. Please note that I'll make some assumptions about the project's structure and content, as I don't have access to the entire project.
 
-The project infrastructure consists of:
+**Project Infrastructure**
+=========================
+
+This repository contains the Terraform configuration for the project infrastructure. The infrastructure consists of:
 
 * A VPC with two subnets
 * An EC2 instance for Jenkins
@@ -12,7 +13,8 @@ The project infrastructure consists of:
 * An EKS cluster for running project workloads
 * A secrets manager for storing sensitive data
 
-## Terraform Configuration
+**Terraform Configuration**
+---------------------------
 
 The Terraform configuration is organized into several files:
 
@@ -23,7 +25,8 @@ The Terraform configuration is organized into several files:
 * `eks.tf`: The file containing the EKS cluster configuration
 * `secrets.tf`: The file containing the secrets manager configuration
 
-## Usage
+**Usage**
+-----
 
 To use this Terraform configuration, follow these steps:
 
@@ -33,10 +36,21 @@ To use this Terraform configuration, follow these steps:
 4. Run `terraform apply` to apply the Terraform configuration
 5. Run `terraform destroy` to destroy the infrastructure
 
-## Notes
 
-* Make sure to update the `variables.tf` file with your own values for the variables
-* Make sure to update the `Jenkins.tf` file with your own values for the EC2 instance configuration
-* Make sure to update the `s3.tf` file with your own values for the S3 bucket configuration
-* Make sure to update the `eks.tf` file with your own values for the EKS cluster configuration
-* Make sure to update the `secrets.tf` file with your own values for the secrets manager configuration
+
+**EKS Cluster Configuration**
+---------------------------
+
+The EKS cluster configuration is defined in `eks.tf`. The cluster is configured with:
+
+* A node group with 2-3 instances of type `t3.micro`
+* A subnet configuration that uses the `aws_subnet.project` resources
+* A role configuration that uses the `aws_iam_role.eks_worker_role` resource
+* A policy attachment configuration that uses the `aws_iam_role_policy_attachment` resources
+
+**Contributing**
+------------
+
+Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request with your changes.
+
+
