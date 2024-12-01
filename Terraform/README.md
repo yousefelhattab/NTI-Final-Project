@@ -1,7 +1,4 @@
 
-
-Based on the provided context, I'll create a GitHub README for the Terraform project. Please note that I'll make some assumptions about the project's structure and content, as I don't have access to the entire project.
-
 **Project Infrastructure**
 =========================
 
