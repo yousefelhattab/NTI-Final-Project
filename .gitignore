@@ -1,0 +1,3 @@
+# Ignore .terraform folder inside Terraform directory
+Terraform/.terraform/
+Terraform/ec2_key.*
